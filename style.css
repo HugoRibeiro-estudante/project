@@ -1,0 +1,56 @@
+html, body{
+	height: 100%;
+    margin: 0;
+    padding: 0;
+	
+}
+
+
+
+.navbar{
+    background-image:  linear-gradient(to right , #160077, #b7b0fc36), url("img/admin-small.png");
+    height: 100px;
+    
+}
+
+
+.add{
+    margin: 3rem;
+    align-items: center;
+    
+
+}
+
+.lateral{
+    background-color: darkblue;
+    
+}
+
+
+.branco{
+    background-color: #fff;
+    height: 100vh;
+    align-items: center;
+    padding: 40px;
+    margin-left: 20px;
+}
+.azul{
+    color: darkslateblue;
+}
+.margin{
+    margin-top: -10px;
+}
+
+tr{
+    text-align: center;
+}
+table{
+    align-items: center;
+    width: 30rem;
+}
+
+#predios{
+    
+    width: 200px;
+    height: 30px;
+}
