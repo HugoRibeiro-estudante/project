@@ -2,28 +2,52 @@ html, body{
 	height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x:hidden;
+    background-color: lightgray;
 	
 }
 
 
-
-.navbar{
+/*  Topo com img   */
+#topo{
     background-image:  linear-gradient(to right , #160077, #b7b0fc36), url("img/admin-small.png");
-    height: 100px;
+    height: 120px;
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    
     
 }
 
-
-.add{
+/*  entrada   */
+#add{
     margin: 3rem;
     align-items: center;
     
-
 }
 
 .lateral{
-    background-color: darkblue;
+    background-image:  linear-gradient(to bottom , #160077, #5da1fac7);
     
+}
+/*  li nav   */
+.menu{
+    margin: 10px 0px;
+    background-color: #160077;
+    padding: 7px;
+    list-style: none;
+    
+}
+/*  Link adm   */
+.adm{
+    margin: 30px 10px;
+    list-style: none;
+}
+
+/*  link nav   */
+.menulink{
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -34,12 +58,7 @@ html, body{
     padding: 40px;
     margin-left: 20px;
 }
-.azul{
-    color: darkslateblue;
-}
-.margin{
-    margin-top: -10px;
-}
+
 
 tr{
     text-align: center;
@@ -48,7 +67,7 @@ table{
     align-items: center;
     width: 30rem;
 }
-
+/*entrada predios*/
 #predios{
     
     width: 200px;
