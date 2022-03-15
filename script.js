@@ -1,35 +1,49 @@
 //*********carrega elementos armazenados no LocalStorage
 
 function carregar(){
+    //dados localstrg
+    let dadoLocal = localStorage.getItem('local');
 
+    let arrayLocal = [];
+
+    if(dadoLocal !== undefined && dadoLocal !== null) {
+        arrayLocal = JSON.parse(dadoLocal);
+    } 
+    
+
+    
+        //tag que recebera dados
         
     //
-        for(let i = 0; i <= localStorage.length; ++i){
+        for(let i = 0; i < arrayLocal.length; ++i){
+            let receber = document.getElementById('receber');
+            let ElemTd1 = document.createElement("td");
+            let ElemTd2 = document.createElement("td");
+            let ElemTr = document.createElement("tr"); 
+            
+            for(let j=0; j < 2; j++) {
+            
+                    
+        
 
-        //dados localstrg
-        let dado = localStorage.getItem('local');
-        //tag que recebera dados
-        let receber = document.getElementById('receber');
-        
-        //criando tags
-        let ElemTd = document.createElement("td");
-        
-        let ElemTr = document.createElement("tr");
-        
-        //separa dados
-        let x = dado.split(",", 2);
         
         //inseri dados no Td
-        ElemTd.textContent = x[i];
+        ElemTd1.textContent = arrayLocal[i][0];
+        ElemTd2.textContent = arrayLocal[i][1];
 
         
-        ElemTd.id = i;
+        ElemTr.id = i;
         
-        
+        console.log(arrayLocal[j]);    
         
         //inseri dados no documento
-        receber.appendChild(ElemTr.appendChild(ElemTd));
-       
+        receber.appendChild(ElemTr);
+        ElemTr.appendChild(ElemTd1);
+        ElemTr.appendChild(ElemTd2);
+        
+        
+    }
+    
 
         }
         
@@ -53,6 +67,14 @@ console.log(localStorage.getItem(local));
 
 function add(){
 
+let dado = localStorage.getItem('local');
+
+let arrayTeste = [];
+
+if(dado !== undefined && dado !== null) {
+    arrayTeste = JSON.parse(dado);
+}  
+
 //input para equipamento
 var equipamento = document.getElementById('equipamento').value;
 
@@ -65,10 +87,10 @@ var predio = select.options[select.selectedIndex].value;
 var array = [];
 
 //adc em array
-array.push([predio, equipamento]);
+arrayTeste.push([predio, equipamento]);  
 
 // entrada de dados no localStorage
-localStorage.setItem("local", array);
+localStorage.setItem("local", JSON.stringify(arrayTeste));
 
 
 
